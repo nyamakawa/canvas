@@ -1,14 +1,11 @@
 window.onload = function () {
-
     var element = document.getElementById('section1');
-
     element.innerText = 'hello';
 
     var canvas = document.getElementById('canvas1');
     var context = canvas.getContext("2d");
     var height = canvas.height;
     var width = canvas.width;
-
 
     function createImage(context, width, height) {
         var image = {
