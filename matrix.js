@@ -128,4 +128,23 @@ var Matrix = {
 
         return out;
     },
+    zero : function(n, m) {
+        var out = [];
+        if (m == undefined) {
+            m = n;
+        }
+
+        for (var i = 0; i < m; i++) {
+            out[i] = Vector.zero(n);
+        }
+        return out;
+    },
+    identity : function(dimention) {
+        var out = Matrix.zero(dimention, dimention);
+        for (var i = 0; i < dimention; i++) {
+            out[i][i] = 1;
+        }
+
+        return out;
+    },
 };
